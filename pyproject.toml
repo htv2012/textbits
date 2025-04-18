@@ -1,7 +1,7 @@
 [project]
 name = "textbits"
 version = "0.1.0"
-description = "Add your description here"
+description = "A homemade PasteBin"
 readme = "README.md"
 authors = [
     { name = "Hai Vu", email = "haivu2004@gmail.com" }
