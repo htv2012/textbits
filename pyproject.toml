@@ -1,5 +1,5 @@
 [project]
-name = "xyz"
+name = "textbits"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-xyz = "xyz:main"
+textbits = "textbits:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -24,6 +24,7 @@ dev = [
     "jupyterlab>=4.3.5",
     "pudb>=2024.1.3",
     "pytest>=8.3.4",
+    "pytest-dotenv>=0.5.2",
     "python-dotenv>=1.0.1",
     "ruff>=0.9.7",
 ]
