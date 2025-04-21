@@ -1,6 +1,6 @@
 [project]
 name = "textbits"
-version = "0.1.0"
+version = "0.1.1"
 description = "A homemade PasteBin"
 readme = "README.md"
 authors = [
