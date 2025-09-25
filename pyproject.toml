@@ -1,5 +1,5 @@
 [project]
-name = "xyz"
+name = "textbits"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -9,10 +9,11 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "click>=8.1.8",
+    "fastapi>=0.115.12",
 ]
 
 [project.scripts]
-xyz = "xyz:main"
+textbits = "textbits:main"
 
 [build-system]
 requires = ["hatchling"]

@@ -6,11 +6,11 @@
 	lint \
 	py \
 	rename \
-	run \
+	serve \
 	test \
 
 ### Default target(s)
-all: test run
+all: test serve
 
 ### Clean up generated files
 clean:
@@ -27,9 +27,9 @@ lab:
 
 ### Perform static analysis
 lint:
-	uv tool run ruff check --select I --fix .
-	uv tool run ruff format .
-	uv tool run ruff check . --fix
+	uv run ruff check --select I --fix .
+	uv run ruff format .
+	uv run ruff check . --fix
 
 ### Open a Python shell
 py:
@@ -40,9 +40,8 @@ rename:
 	uv run etc/set_project_name.py
 
 ### Run the project
-run: lint
-	PYTHONBREAKPOINT="pudb.set_trace" uv run xyz
-	PYTHONBREAKPOINT="pudb.set_trace" uv run xyz --version
+serve: lint
+	uv run textbits serve
 
 ### Run unit tests
 test: lint
