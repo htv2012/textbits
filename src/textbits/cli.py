@@ -1,7 +1,15 @@
-import click
+import argparse
+
+from .serve import serve
 
 
-@click.command()
-@click.version_option()
-def main() -> None:
-    print("Hello world!")
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("action", choices=["serve"])
+    options, args = parser.parse_known_args()
+
+    print(f"{options=}")
+    print(f"{args=}")
+
+    if options.action == "serve":
+        serve(args)

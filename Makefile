@@ -6,11 +6,11 @@
 	lint \
 	py \
 	rename \
-	run \
+	serve \
 	test \
 
 ### Default target(s)
-all: test run
+all: test serve
 
 ### Clean up generated files
 clean:
@@ -40,9 +40,8 @@ rename:
 	uv run etc/set_project_name.py
 
 ### Run the project
-run: lint
-	uv run textbits
-	uv run textbits --version
+serve: lint
+	uv run textbits serve
 
 ### Run unit tests
 test: lint
